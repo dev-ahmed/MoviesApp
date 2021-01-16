@@ -6,9 +6,6 @@ export const searchMovies = (query: string, page?: number) => async (
   dispatch: any,
 ) => {
   const payload = await get(endpoints.SEARCH, {params: {query, page}});
-  console.log('====================================');
-  console.log(payload);
-  console.log('====================================');
   await dispatch({
     type: SEARCH_MOVIES,
     payload,
